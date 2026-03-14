@@ -1,0 +1,149 @@
+:root {
+  --bg: #f2efe8;
+  --paper: #fffdf9;
+  --ink: #2b231c;
+  --accent: #0c7c59;
+  --warn: #c86b00;
+  --goal: #b59f00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 20%, #f7c87366, transparent 35%),
+    radial-gradient(circle at 80% 15%, #b8d9c466, transparent 30%),
+    linear-gradient(180deg, #f8f4ec, #e8e2d7);
+}
+
+.layout {
+  width: min(96vw, 1680px);
+  margin: 0 auto;
+  padding: clamp(0.8rem, 1vw, 1.35rem);
+  display: grid;
+  gap: clamp(0.8rem, 1vw, 1.15rem);
+  grid-template-columns: 1fr;
+}
+
+.panel {
+  background: var(--paper);
+  border: 2px solid #d9cdb6;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  box-shadow: 0 10px 30px #6f5b3b1f;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 1.2rem + 0.8vw, 2rem);
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2a3d57;
+}
+
+p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.project-note {
+  margin-top: 0.45rem;
+  color: #5a4d3f;
+}
+
+.credit-line {
+  margin-top: 0.35rem;
+  font-weight: 700;
+}
+
+.credit-line a {
+  color: #0c7c59;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.stats {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stats span {
+  background: #f7f1e6;
+  border: 1px solid #d7c7ab;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+
+.controls {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+label {
+  font-weight: 700;
+}
+
+select,
+button {
+  border: 2px solid #8f7d63;
+  background: #fffefb;
+  color: #2b231c;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tutorial {
+  margin-top: 0.7rem;
+  background: linear-gradient(180deg, #edf5ff, #e3eefb);
+  border: 1px solid #c6d4e9;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+}
+
+#tutorialText {
+  margin-top: 0.35rem;
+  color: #253446;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #8f7d63;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #b5d2df, #dbeff7 45%, #f2f5f4);
+  box-shadow: 0 12px 34px #3d3f451f;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    padding: 1.1rem 1.4rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple 2D Physics Engine Demo</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <h1>Homebrew Physics Arcade</h1>
+      <p class="credit-line">
+        Built by
+        <a href="https://www.instagram.com/jayyvarmaa/" target="_blank" rel="noopener noreferrer">@jayyvarmaa</a>
+      </p>
+      <br />
+      <p>
+        Five mini games powered by one homebrew 2D physics engine.
+        Controls: A/D move, Space jump, S fast-fall.
+      </p>
+      <p class="project-note">
+        This site was built just for fun experimentation to test how physics can work on a website.
+        There is no roadmap beyond this prototype.
+      </p>
+      
+      <div class="controls">
+        <label for="gameMode">Game</label>
+        <select id="gameMode">
+          <option value="0">1. Gateway Run</option>
+          <option value="1">2. Bounce Trial</option>
+          <option value="2">3. Coin Climber</option>
+          <option value="3">4. Moving Bridge</option>
+          <option value="4">5. Hazard Gauntlet</option>
+        </select>
+        <button id="restart" type="button">Restart</button>
+      </div>
+      <section class="tutorial" aria-label="How to play">
+        <h2>How To Play</h2>
+        <p id="tutorialText">
+          A/D move, Space jump, S fast-fall. Orange platforms are bouncy. Touch yellow to finish.
+        </p>
+      </section>
+      <div class="stats">
+        <span id="status">Loading</span>
+        <span id="objective">Objective: -</span>
+        <span id="lives">Lives: -</span>
+        <span id="fps">FPS: -</span>
+        <span id="stepMs">Step: -</span>
+      </div>
+    </section>
+    <canvas id="game" width="1280" height="720" aria-label="Physics arcade"></canvas>
+  </main>
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
